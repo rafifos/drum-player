@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://cdnqa.mesalva.com/desafios-techs/drumplayer/files.json",
+  "type": "object",
+  "title": "drum-kit index schema",
+  "description": "The schema used to validate the files index used by drum-kit.",
+  "properties": {
+    "files": {
+      "additionalItems": true,
+      "default": [],
+      "description": "Indexes a list of files that will be available to drum-kit",
+      "examples": [["data/clap-808.wav", "data/clap-analog.wav"]],
+      "title": "The files Schema",
+      "type": "array",
+      "uniqueItems": true
+    }
+  },
+  "required": ["files"],
+  "additionalProperties": false,
+  "default": {
+    "files": []
+  },
+  "examples": [
+    {
+      "files": ["data/clap-808.wav", "data/clap-analog.wav"]
+    }
+  ]
+}
